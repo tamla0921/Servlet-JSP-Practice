@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>CRUD Test</display-name>
+  <!-- 이클립스에서는 기본적으로 프로젝트 이름이 적혀있으나, 수정이 가능. -->
+  
+  <servlet>
+      <servlet-name>front</servlet-name>
+      <servlet-class>com.dev.controller.FrontController</servlet-class>
+      <init-param>
+        <param-name>charset</param-name>
+        <param-value>UTF-8</param-value>
+        <!-- charset=UTF-8 변수 지정. -->
+      </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>front</servlet-name>
+    <url-pattern>*.do</url-pattern>
+    <!-- URL 요청 정보가 .do로 끝나는 요청이 들어올 때마다 실행. -->
+  </servlet-mapping>
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <!-- 클라이언트로부터 웹 애플리케이션의 루트 디렉터리 요청이 들어왔을 때 보여주는 페이지 설정. -->
+    <!-- localhost:____/dev/  로 들어오면 index.jsp 페이지가 실행. -->
+  </welcome-file-list>
+</web-app>
